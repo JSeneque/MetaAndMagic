@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CircleFade
+  m_Controller: {fileID: 9100000, guid: 755c95e6d88501245937a132a481f0a8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b0b2c917c62c5fd40b2b150a79f28dfe, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b183db098b5c6b346b18970239dbc0d8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fe61e328e4d7ba24e9ec891081e8394a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d330dc84cce95c479a302db57090ff6, type: 2}
