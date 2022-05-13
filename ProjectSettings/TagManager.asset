@@ -45,11 +45,17 @@ TagManager:
   - name: Background
     uniqueID: 2953070939
     locked: 0
+  - name: Base
+    uniqueID: 2664423371
+    locked: 0
   - name: Ground
     uniqueID: 3370989845
     locked: 0
   - name: Item
     uniqueID: 2211861307
+    locked: 0
+  - name: Foreground
+    uniqueID: 2545372213
     locked: 0
   - name: Player
     uniqueID: 4000283327

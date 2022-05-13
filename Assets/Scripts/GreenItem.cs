@@ -11,6 +11,6 @@ public class GreenItem : Interactable
 
         Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y + offset);
         Instantiate(effect, playerPos, Quaternion.identity);
-        player.GetComponent<PlayerController>().TransformToSlime();
+        //player.GetComponent<PlayerController>().TransformToSlime();
     }
 }

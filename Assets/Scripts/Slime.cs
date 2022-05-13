@@ -32,11 +32,11 @@ public class Slime : Enemy
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= chaseRadius && distance > attackRadius && !target.gameObject.GetComponent<PlayerController>().isEffected)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            animator.SetBool("moving", true);
-        } 
+        //if (distance <= chaseRadius && distance > attackRadius && !target.gameObject.GetComponent<PlayerController>().isEffected)
+        //{
+        //    transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        //    animator.SetBool("moving", true);
+        //} 
         //else
         //{
         //    transform.position = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
@@ -58,19 +58,19 @@ public class Slime : Enemy
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= chaseRadius && !target.gameObject.GetComponent<PlayerController>().isEffected)
-        {
-            timer += Time.deltaTime;
+        //if (distance <= chaseRadius && !target.gameObject.GetComponent<PlayerController>().isEffected)
+        //{
+        //    timer += Time.deltaTime;
 
-            if (timer >= fireRate)
-            {
-                Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-                timer = 0;
-            }
-        }
-        else
-        {
-            timer = 0;
-        }
+        //    if (timer >= fireRate)
+        //    {
+        //        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        //        timer = 0;
+        //    }
+        //}
+        //else
+        //{
+        //    timer = 0;
+        //}
     }
 }

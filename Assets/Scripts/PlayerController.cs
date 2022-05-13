@@ -6,69 +6,116 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     
-    public Sprite slimeImg;
-    public Sprite playerImg;
-    public float effectTimer = 20.0f;
-    public float timer = 0f;
-    public bool isEffected = false;
-    public GameObject effect;
-    public float effectOffset = -0.629f;
+    //public Sprite slimeImg;
+    //public Sprite playerImg;
+    //public float effectTimer = 20.0f;
+    //public float timer = 0f;
+    //public bool isEffected = false;
+    //public GameObject effect;
+    //public float effectOffset = -0.629f;
     
 
     public bool canMove = true;
 
     public static PlayerController instance;
 
+    private Vector3 _change;
+
     private Rigidbody2D rb;
-    private Vector2 moveVelocity;
-    private SpriteRenderer renderer;
+    //private Vector2 moveVelocity;
+    //private SpriteRenderer renderer;
+    private Animator _animator;
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         instance = this;
-        renderer = GetComponent<SpriteRenderer>(); ;
+        //renderer = GetComponent<SpriteRenderer>(); ;
+        _animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canMove)
+        //if (canMove)
+        //{
+        //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        //Debug.Log(moveInput);
+
+        //if (moveInput != Vector2.zero)
+        //{
+        //    moveVelocity = moveInput.normalized * speed;
+        //    _animator.SetFloat("moveX", moveInput.x);
+        //    _animator.SetFloat("moveY", moveInput.y);
+        //    _animator.SetBool("moving", true);
+        //} else
+        //{
+        //    _animator.SetBool("moving", false);
+        //    moveVelocity = Vector2.zero;
+        //}
+
+        _change = Vector3.zero;
+        _change.x = Input.GetAxisRaw("Horizontal");
+        _change.y = Input.GetAxisRaw("Vertical");
+
+        Debug.Log(_change);
+
+        if(_change != Vector3.zero)
         {
-            Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            moveVelocity = moveInput.normalized * speed;
+            MoveCharacter();
+            _animator.SetFloat("moveX", _change.x);
+            _animator.SetFloat("moveY", _change.y);
+            _animator.SetBool("moving", true);
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            _animator.SetBool("moving", false);
         }
 
-        if (isEffected)
-        {
-            timer += Time.deltaTime;
-            if (timer > effectTimer)
-            {
-                timer = 0f;
-                Vector2 playerPos = new Vector2(transform.position.x, transform.position.y + effectOffset);
-                Instantiate(effect, playerPos, Quaternion.identity);
-                renderer.sprite = playerImg;
-                isEffected = false;
-            }
-        }
-        
+
+
+        //}
+        //else
+        //{
+        //    rb.velocity = Vector2.zero;
+        //}
+
+        //if (isEffected)
+        //{
+        //    timer += Time.deltaTime;
+        //    if (timer > effectTimer)
+        //    {
+        //        timer = 0f;
+        //        Vector2 playerPos = new Vector2(transform.position.x, transform.position.y + effectOffset);
+        //        Instantiate(effect, playerPos, Quaternion.identity);
+        //        renderer.sprite = playerImg;
+        //        isEffected = false;
+        //    }
+        //}
+
     }
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        if (_change != Vector3.zero)
+        {
+            MoveCharacter();
+        }
     }
 
-    public void TransformToSlime()
+    //public void TransformToSlime()
+    //{
+    //    renderer.sprite = slimeImg;
+    //    isEffected = true;
+    //}
+
+    void MoveCharacter()
     {
-        renderer.sprite = slimeImg;
-        isEffected = true;
-
+        rb.MovePosition(transform.position + _change * speed * Time.deltaTime);
+        //transform.Translate(Vector3.right * _change.x * speed * Time.deltaTime);
+        //transform.Translate(Vector3.up * _change.y * speed * Time.deltaTime);
     }
-
     
 }
+

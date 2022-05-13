@@ -11,7 +11,7 @@ public class SlimeTransformation : MonoBehaviour
     {
         player = PlayerController.instance.gameObject;
         Vector2 playerPos = new Vector2(player.transform.position.x, player.transform.position.y + offset);
-        player.GetComponent<PlayerController>().TransformToSlime();
+        //player.GetComponent<PlayerController>().TransformToSlime();
     }
 
     // Update is called once per frame
