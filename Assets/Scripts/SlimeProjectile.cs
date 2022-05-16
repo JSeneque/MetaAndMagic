@@ -16,9 +16,10 @@ public class SlimeProjectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerPos = PlayerController.instance.transform.position;
+        player = PlayerController.Instance;
+        playerPos = player.transform.position;
         playerManager = PlayerManager.instance;
-        player = PlayerController.instance;
+        
         camAnim = Camera.main.GetComponent<Animator>();
     }
 

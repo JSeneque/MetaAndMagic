@@ -1,19 +1,106 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
-    public Canvas canvas;
-    // Start is called before the first frame update
-    void Start()
+    private Dictionary<int, Vector3> _scenePositions = new Dictionary<int, Vector3>();
+    private Dictionary<int, Vector2> _lastCameraMinPosition = new Dictionary<int, Vector2>();
+    private Dictionary<int, Vector2> _lastCameraMaxPosition = new Dictionary<int, Vector2>();
+
+    public static GameManager Instance;
+
+    private void Awake()
     {
-        canvas.GetComponent<UIFade>().FadeFromBlack();
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetSceneLastPosition(int _sceneId, Vector3 _pos)
     {
-        
+        Vector3 temp;
+        if (_scenePositions.TryGetValue(_sceneId, out temp))
+        {
+            _scenePositions[_sceneId] = _pos;
+        }
+        else
+        {
+            _scenePositions.Add(_sceneId, _pos);
+        }
+    }
+
+    public void SetSceneLastCameraMinPosition(int _sceneId, Vector2 _min)
+    {
+        Vector2 temp;
+        if (_lastCameraMinPosition.TryGetValue(_sceneId, out temp))
+        {
+            _lastCameraMinPosition[_sceneId] = _min;
+        }
+        else
+        {
+            _lastCameraMinPosition.Add(_sceneId, _min);
+        }
+    }
+
+    public void SetSceneLastCameraMaxPosition(int _sceneId, Vector2 _max)
+    {
+        Vector2 temp;
+        if (_lastCameraMaxPosition.TryGetValue(_sceneId, out temp))
+        {
+            _lastCameraMaxPosition[_sceneId] = _max;
+        }
+        else
+        {
+            _lastCameraMaxPosition.Add(_sceneId, _max);
+        }
+    }
+
+    public Vector3 GetSceneLastPosition(int _sceneId)
+    {
+        Vector3 temp;
+
+        //Debug.Log("Scene passed: " + _sceneId);
+
+        if(_scenePositions.TryGetValue(_sceneId, out temp))
+        {
+            return _scenePositions[_sceneId];
+        }
+        else
+        {
+            return Vector3.zero;
+        }
+    }
+
+    public Vector2 GetSceneLastCameraMinPosition(int _sceneId)
+    {
+        Vector2 temp;
+
+        if (_lastCameraMinPosition.TryGetValue(_sceneId, out temp))
+        {
+            return _lastCameraMinPosition[_sceneId];
+        }
+        else
+        {
+            return Vector2.zero;
+        }
+    }
+
+    public Vector2 GetSceneLastCameraMaxPosition(int _sceneId)
+    {
+        Vector2 temp;
+
+        if (_lastCameraMaxPosition.TryGetValue(_sceneId, out temp))
+        {
+            return _lastCameraMaxPosition[_sceneId];
+        }
+        else
+        {
+            return Vector2.zero;
+        }
     }
 }

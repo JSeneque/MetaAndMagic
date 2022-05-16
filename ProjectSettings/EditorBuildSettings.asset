@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HouseInterior.unity
     guid: 5376d7d8573b3644bb044d583202006a
-  - enabled: 0
-    path: Assets/Scenes/TheEnd.unity
-    guid: ffc1bff85d6612d4093a2a8ac3ff7912
+  - enabled: 1
+    path: Assets/Scenes/LavaCave.unity
+    guid: 9be8797f578d1f54c81bbd9521469f3c
   m_configObjects: {}

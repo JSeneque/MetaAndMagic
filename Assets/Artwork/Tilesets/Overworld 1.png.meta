@@ -1153,13 +1153,13 @@ TextureImporter:
     second: waters_edge_12
   - first:
       213: 5703461117968425983
-    second: Overworld_383
+    second: clift_top_4
   - first:
       213: -8552779481319937432
-    second: Overworld_384
+    second: clift_top_5
   - first:
       213: -4516124463063074946
-    second: Overworld_385
+    second: clift_top_6
   - first:
       213: 51892817205249142
     second: Overworld_386
@@ -1258,16 +1258,16 @@ TextureImporter:
     second: Overworld_417
   - first:
       213: -2593636597192664847
-    second: Overworld_418
+    second: cliff_top_1
   - first:
       213: -3718484339965286287
-    second: Overworld_419
+    second: cliff_top_2
   - first:
       213: -5304373983250228502
-    second: Overworld_420
+    second: cliff_top_3
   - first:
       213: 8860831932780837911
-    second: Overworld_421
+    second: cave_entrance_2
   - first:
       213: 5688151423550280332
     second: Overworld_422
@@ -1363,16 +1363,16 @@ TextureImporter:
     second: Overworld_452
   - first:
       213: -1350113844400140581
-    second: Overworld_453
+    second: cliff_1
   - first:
       213: -4957324397105027644
-    second: Overworld_454
+    second: cliff_2
   - first:
       213: 1594296731240503642
-    second: Overworld_455
+    second: cliff_3
   - first:
       213: 6699491708720139510
-    second: Overworld_456
+    second: cave_entrance
   - first:
       213: 1551073165797542418
     second: Overworld_457
@@ -1456,13 +1456,13 @@ TextureImporter:
     second: Overworld_483
   - first:
       213: -4720066856631090842
-    second: Overworld_484
+    second: cliff_4
   - first:
       213: 4256050304118005748
-    second: Overworld_485
+    second: cliff_5
   - first:
       213: -158437919885800910
-    second: Overworld_486
+    second: cliff_6
   - first:
       213: -3820535219765100889
     second: Overworld_487
@@ -1555,13 +1555,13 @@ TextureImporter:
     second: Overworld_516
   - first:
       213: 6360067910422657752
-    second: Overworld_517
+    second: cliff_7
   - first:
       213: -19905641140217654
-    second: Overworld_518
+    second: cliff_8
   - first:
       213: -2159232272279215932
-    second: Overworld_519
+    second: cliff_9
   - first:
       213: -4541740344083130873
     second: Overworld_520
@@ -10774,7 +10774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_383
+      name: clift_top_4
       rect:
         serializedVersion: 2
         x: 64
@@ -10795,7 +10795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_384
+      name: clift_top_5
       rect:
         serializedVersion: 2
         x: 80
@@ -10816,7 +10816,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_385
+      name: clift_top_6
       rect:
         serializedVersion: 2
         x: 96
@@ -11509,7 +11509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_418
+      name: cliff_top_1
       rect:
         serializedVersion: 2
         x: 64
@@ -11530,7 +11530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_419
+      name: cliff_top_2
       rect:
         serializedVersion: 2
         x: 80
@@ -11551,7 +11551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_420
+      name: cliff_top_3
       rect:
         serializedVersion: 2
         x: 96
@@ -11572,7 +11572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_421
+      name: cave_entrance_2
       rect:
         serializedVersion: 2
         x: 112
@@ -12244,7 +12244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_453
+      name: cliff_1
       rect:
         serializedVersion: 2
         x: 64
@@ -12265,7 +12265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_454
+      name: cliff_2
       rect:
         serializedVersion: 2
         x: 80
@@ -12286,7 +12286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_455
+      name: cliff_3
       rect:
         serializedVersion: 2
         x: 96
@@ -12307,7 +12307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_456
+      name: cave_entrance
       rect:
         serializedVersion: 2
         x: 112
@@ -12895,7 +12895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_484
+      name: cliff_4
       rect:
         serializedVersion: 2
         x: 64
@@ -12916,7 +12916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_485
+      name: cliff_5
       rect:
         serializedVersion: 2
         x: 80
@@ -12937,7 +12937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_486
+      name: cliff_6
       rect:
         serializedVersion: 2
         x: 96
@@ -13588,7 +13588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_517
+      name: cliff_7
       rect:
         serializedVersion: 2
         x: 64
@@ -13609,7 +13609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_518
+      name: cliff_8
       rect:
         serializedVersion: 2
         x: 80
@@ -13630,7 +13630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_519
+      name: cliff_9
       rect:
         serializedVersion: 2
         x: 96
@@ -25293,7 +25293,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

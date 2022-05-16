@@ -9,7 +9,7 @@ public abstract class Interactable : MonoBehaviour
 
     protected virtual void Awake()
     {
-        player = PlayerController.instance.gameObject;
+        player = PlayerController.Instance.gameObject;
     }
     public virtual void Use()
     {

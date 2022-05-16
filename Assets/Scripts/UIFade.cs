@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIFade : MonoBehaviour
 {
-    public static UIFade instance;
+    public static UIFade Instance;
 
     public Image fadeScreen;
     public float fadeSpeed;
@@ -15,7 +15,14 @@ public class UIFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame

@@ -12,7 +12,7 @@ public class FlowerItem : Interactable
     
     public override void Use()
     {
-        Transform player = PlayerController.instance.transform;
+        Transform player = PlayerController.Instance.transform;
         cauldron = GameObject.FindGameObjectWithTag("Cauldron");
 
         float distance = Vector3.Distance(cauldron.transform.position, player.position);

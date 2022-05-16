@@ -13,15 +13,22 @@ public class PlayerController : MonoBehaviour
     //public bool isEffected = false;
     //public GameObject effect;
     //public float effectOffset = -0.629f;
+
+    struct ScenePositions
+    {
+        int SceneID;
+        Transform Position;
+    }
     
 
     public bool canMove = true;
 
-    public static PlayerController instance;
+    public static PlayerController Instance;
 
     private Vector3 _change;
-
     private Rigidbody2D rb;
+    private Dictionary<int, ScenePositions> _scenePositions = new Dictionary<int, ScenePositions>();
+
     //private Vector2 moveVelocity;
     //private SpriteRenderer renderer;
     private Animator _animator;
@@ -29,9 +36,17 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        instance = this;
-        //renderer = GetComponent<SpriteRenderer>(); ;
         _animator = GetComponentInChildren<Animator>();
+
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+        //renderer = GetComponent<SpriteRenderer>(); ;
     }
 
     // Update is called once per frame
@@ -59,7 +74,7 @@ public class PlayerController : MonoBehaviour
         _change.x = Input.GetAxisRaw("Horizontal");
         _change.y = Input.GetAxisRaw("Vertical");
 
-        Debug.Log(_change);
+        //Debug.Log(_change);
 
         if(_change != Vector3.zero)
         {
@@ -115,6 +130,11 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(transform.position + _change * speed * Time.deltaTime);
         //transform.Translate(Vector3.right * _change.x * speed * Time.deltaTime);
         //transform.Translate(Vector3.up * _change.y * speed * Time.deltaTime);
+    }
+
+    public void SetScenePosition(int _sceneId, Transform _pos)
+    {
+        
     }
     
 }

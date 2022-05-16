@@ -565,7 +565,7 @@ TextureImporter:
     second: Inner_186
   - first:
       213: 364932370575592133
-    second: Inner_187
+    second: book
   - first:
       213: -5119657092364550587
     second: Inner_188
@@ -613,10 +613,10 @@ TextureImporter:
     second: Inner_202
   - first:
       213: 7435656398386437494
-    second: Inner_203
+    second: Furnance_1
   - first:
       213: -6182711161307539557
-    second: Inner_204
+    second: Furnance_2
   - first:
       213: -5574581293811903546
     second: Inner_205
@@ -655,10 +655,10 @@ TextureImporter:
     second: Plant_Pot_1
   - first:
       213: -2067843661656441382
-    second: Inner_217
+    second: Furnance_3
   - first:
       213: 841923261764661270
-    second: Inner_218
+    second: Furnance_4
   - first:
       213: -1370741065443462229
     second: Inner_219
@@ -691,16 +691,16 @@ TextureImporter:
     second: Inner_228
   - first:
       213: -8352990998237239818
-    second: Inner_229
+    second: Furnance_Lit_1
   - first:
       213: 3199903825611840606
-    second: Inner_230
+    second: Furnance_Lit_2
   - first:
       213: -768003648655306714
-    second: Inner_231
+    second: Furnance_5
   - first:
       213: -5101327468175622181
-    second: Inner_232
+    second: Furnance_6
   - first:
       213: 5414420618511201751
     second: Inner_233
@@ -4390,7 +4390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inner_187
+      name: book
       rect:
         serializedVersion: 2
         x: 208
@@ -4663,13 +4663,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inner_203
+      name: Furnance_1
       rect:
         serializedVersion: 2
         x: 192
-        y: 224
-        width: 16
-        height: 16
+        y: 192
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4679,27 +4679,6 @@ TextureImporter:
       bones: []
       spriteID: 67d1fa93912c03760800000000000000
       internalID: 7435656398386437494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inner_204
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b97db69c4f8923aa0800000000000000
-      internalID: -6182711161307539557
       vertices: []
       indices: 
       edges: []
@@ -4894,48 +4873,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inner_217
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: addbce7452b8d43e0800000000000000
-      internalID: -2067843661656441382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inner_218
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 610fe91febc1fab00800000000000000
-      internalID: 841923261764661270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Inner_219
       rect:
         serializedVersion: 2
@@ -5104,12 +5041,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inner_229
+      name: Furnance_Lit_1
       rect:
         serializedVersion: 2
         x: 160
         y: 192
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -5120,69 +5057,6 @@ TextureImporter:
       bones: []
       spriteID: 6f5a80271f6341c80800000000000000
       internalID: -8352990998237239818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inner_230
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5cd1095397586c20800000000000000
-      internalID: 3199903825611840606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inner_231
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62052b720c08755f0800000000000000
-      internalID: -768003648655306714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Inner_232
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdff27812b17439b0800000000000000
-      internalID: -5101327468175622181
       vertices: []
       indices: 
       edges: []
