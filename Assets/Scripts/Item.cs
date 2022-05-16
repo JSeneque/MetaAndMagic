@@ -12,22 +12,18 @@ public class Item : Interactable
     {
         Transform player = PlayerController.Instance.transform;
         Vector2 position = new Vector2(player.transform.position.x, player.transform.position.y);
-
-        // do a sphere hit check
-        //Collider[] hitColliders = Physics.OverlapSphere(player.position, _dropDistance);
         Collider2D[] hitInfo = Physics2D.OverlapCircleAll(position, _dropDistance);
         {
             foreach(var hit in hitInfo)
             {
                 if (hit.gameObject.CompareTag(_interactWith))
                 {
-                    Debug.Log("Hit " + _interactWith);
-                    //Instantiate(effect, hit.gameObject.transform);
-                    hit.gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                    hit.gameObject.GetComponent<Cow>().OnDie();
+                    var reactor = hit.gameObject.GetComponent<Reactor>();
+                    reactor.Remove();
+                    reactor.Effect();
+                    reactor.Drop();
                 }
             }
-            
         }
     }
 

@@ -1,29 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    private Inventory inventory;
-    public GameObject itemButton;
+    [SerializeField] GameObject _button;
 
+    private Inventory _inventory;
 
-    void Awake()
-    {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();   
-    }
+    void Start() => _inventory = PlayerController.Instance.GetComponent<Inventory>();
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            for (int i = 0; i < _inventory.slots.Length; i++)
             {
-                if (inventory.isFull[i] == false)
+                if (!_inventory.isFull[i])
                 {
                     // add item
-                    inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    _inventory.isFull[i] = true;
+                    Instantiate(_button, _inventory.slots[i].transform, false);
                     Destroy(gameObject);
                     break;
                 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5068620138486480195}
   - component: {fileID: 1757135876}
   - component: {fileID: 1757135877}
+  - component: {fileID: -716786756835506272}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -61,8 +62,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5661a5b741a29434d9783869d5a8244e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemButton: {fileID: 4424480324635426966, guid: bd4083872f8836841b60bdd51d86131c,
-    type: 3}
+  _button: {fileID: 4424480324635426966, guid: bd4083872f8836841b60bdd51d86131c, type: 3}
+--- !u!114 &-716786756835506272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6092491607775855915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8282985fc53684468188535227778de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}
+  _interactWith: Tree
+  _dropDistance: 0.5
+  _dropItem: {fileID: 0}
 --- !u!1 &6189592114900149092
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6189592114900149092}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.432, y: -0.291, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5068620138486480195}
@@ -131,11 +147,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2083105989
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -6392011840319975046, guid: 477c21a07ad5b4943badc7b9d84e4c52,
-    type: 3}
+  m_SortingLayerID: -1749595083
+  m_SortingLayer: 5
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: e1787ad2aa795f740b1adaf93d07652f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4424480324635426965}
   - component: {fileID: 4424480324635426964}
   - component: {fileID: -5969676022599667445}
-  - component: {fileID: 4946754263799870434}
+  - component: {fileID: -2144180284215482726}
   m_Layer: 5
-  m_Name: DaggerButton
+  m_Name: StickButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7132eb5e9e33274f8e035385c4bc7e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb5c75e20cfde144589e40c7fd88982d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4946754263799870434}
-        m_TargetAssemblyTypeName: Item, Assembly-CSharp
-        m_MethodName: Use
+      - m_Target: {fileID: 4424480324635426966}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0068163479e965846b6269b9bf599237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 8307067155355028635, guid: 1dc102e1836fe9f42bbfb35f3df22749, type: 3}
---- !u!114 &4946754263799870434
+  item: {fileID: 3999036874623054206, guid: 182e9bf2caf788f468472518f1eb3521, type: 3}
+--- !u!114 &-2144180284215482726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8282985fc53684468188535227778de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 7304495343078412678, guid: 2c4ec82d49cdc524c8da2301935d1a4f, type: 3}
-  _interactWith: Cow
-  _dropDistance: 2
+  effect: {fileID: 0}
+  _interactWith: Lava
+  _dropDistance: 1
   _dropItem: {fileID: 0}

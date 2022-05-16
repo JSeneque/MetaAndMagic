@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    public GameObject effect;
+    [SerializeField] protected GameObject effect;
+
     protected GameObject player;
 
-    protected virtual void Awake()
+    protected virtual void Start()
     {
         player = PlayerController.Instance.gameObject;
     }
+
     public virtual void Use()
     {
         Destroy(gameObject);
     }
+
+
 }

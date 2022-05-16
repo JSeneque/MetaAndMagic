@@ -1,4 +1,4 @@
-public class Cow : Reactor
+public class TreeItem : Reactor
 {
     public override void Remove()
     {

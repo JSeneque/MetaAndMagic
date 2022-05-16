@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4424480324635426965}
   - component: {fileID: 4424480324635426964}
   - component: {fileID: -5969676022599667445}
-  - component: {fileID: 7875430685634485737}
+  - component: {fileID: 5350731501115359932}
   m_Layer: 5
   m_Name: AxeButton
   m_TagString: Untagged
@@ -122,8 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7875430685634485737}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: -716786756835506272, guid: 6062203e3bdba2d44a3dac31367a1d6d,
+          type: 3}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
         m_MethodName: Use
         m_Mode: 1
         m_Arguments:
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 6092491607775855915, guid: 6062203e3bdba2d44a3dac31367a1d6d, type: 3}
---- !u!114 &7875430685634485737
+--- !u!114 &5350731501115359932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,10 +157,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4424480324635426966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28693a0ddf460b44c8ef538677eb6696, type: 3}
+  m_Script: {fileID: 11500000, guid: e8282985fc53684468188535227778de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 7862906294652533336, guid: aeb774f5cabe9f2479775d1524ca4c02, type: 3}
-  dropDistance: 1
-  potion: {fileID: 7771537285658075365, guid: 695d53532a9f5d447ad47d9b9865d99e, type: 3}
-  brewingColour: {r: 0.77647066, g: 0.82745105, b: 0.09411766, a: 1}
+  effect: {fileID: 7304495343078412678, guid: 2c4ec82d49cdc524c8da2301935d1a4f, type: 3}
+  _interactWith: Tree
+  _dropDistance: 1
+  _dropItem: {fileID: 0}
