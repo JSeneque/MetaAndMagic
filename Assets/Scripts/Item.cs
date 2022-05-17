@@ -22,6 +22,7 @@ public class Item : Interactable
                     reactor.Remove();
                     reactor.Effect();
                     reactor.Drop();
+                    reactor.Change(gameObject.name);
                 }
             }
         }

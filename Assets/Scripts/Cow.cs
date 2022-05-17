@@ -14,4 +14,9 @@ public class Cow : Reactor
     {
         base.Drop();
     }
+
+    public override void Change(string name)
+    {
+        base.Change(name);
+    }
 }
