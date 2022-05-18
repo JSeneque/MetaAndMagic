@@ -2275,7 +2275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effect: {fileID: 0}
   _item: {fileID: 0}
-  _evolve: {fileID: 4424480324635426966, guid: 6cd6fb073cf02f34a9bb9d08e044946a, type: 3}
+  _button: {fileID: 0}
   _canRemove: 0
 --- !u!1 &80495671
 GameObject:
@@ -2825,7 +2825,7 @@ PrefabInstance:
     - target: {fileID: 7501137320716979191, guid: cce492d3e37cdea49b7d400905536be7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cce492d3e37cdea49b7d400905536be7, type: 3}
