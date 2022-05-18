@@ -5791,7 +5791,7 @@ PrefabInstance:
     - target: {fileID: 1735381254518856808, guid: 5c85b92d447ff5d45b3fbe1925951a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.47
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 1735381254518856808, guid: 5c85b92d447ff5d45b3fbe1925951a6a,
         type: 3}
@@ -5842,6 +5842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpikeTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115420144160912943, guid: 5c85b92d447ff5d45b3fbe1925951a6a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c85b92d447ff5d45b3fbe1925951a6a, type: 3}

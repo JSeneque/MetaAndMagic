@@ -10,6 +10,7 @@ public class HeartSystem : MonoBehaviour
     public Sprite emptyHeart;
     public int health;
     public int healthMax;
+    public ParticleSystem _bloodSpray;
 
     private void Start()
     {
@@ -34,11 +35,14 @@ public class HeartSystem : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
+        _bloodSpray.Play();
+
         UpdateHeartUI();
 
         if(health <= 0)
         {
             Destroy(this.gameObject);
+
         }
     }
 
