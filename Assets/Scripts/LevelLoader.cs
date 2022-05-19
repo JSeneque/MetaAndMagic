@@ -9,7 +9,8 @@ public class LevelLoader : MonoBehaviour
     private Animator _animator;
 
     [SerializeField] private float _transitionTime = 1f;
-
+    [SerializeField] private AudioSource _pressButton;
+     
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -37,6 +38,7 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int leveIndex)
     {
         _animator.SetTrigger("Start");
+        _pressButton.Play();
         yield return new WaitForSeconds(_transitionTime);
         SceneManager.LoadScene(leveIndex);
     }

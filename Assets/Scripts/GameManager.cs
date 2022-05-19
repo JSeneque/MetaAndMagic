@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _uIInventory;
     [SerializeField] GameObject _uiPlayAgain;
 
+    //tracking win conditions
+    public bool _hasCollectedOre;
+    public bool _hasCollectedLeather;
+    public bool _hasCollectedCrystal;
+    public bool _lit;
+
 
     public static GameManager Instance;
 

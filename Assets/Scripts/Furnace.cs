@@ -5,14 +5,14 @@ using UnityEngine;
 public class Furnace : Reactor
 {
     [SerializeField] ParticleSystem _smoke;
-    [SerializeField] bool _lit;
+    //[SerializeField] bool _lit;
     [SerializeField] ParticleSystem _psEffect;
     [SerializeField] Color _oreColor;
     [SerializeField] Color _leatherColor;
     [SerializeField] Color _crystalColor;
-    private bool _hasCollectedOre;
-    private bool _hasCollectedLeather;
-    private bool _hasCollectedCrystal;
+    //private bool _hasCollectedOre;
+    //private bool _hasCollectedLeather;
+    //private bool _hasCollectedCrystal;
 
     private Inventory _inventory;
 
@@ -29,14 +29,21 @@ public class Furnace : Reactor
         }
 
         _inventory = PlayerController.Instance.GetComponent<Inventory>();
+        if (GameManager.Instance._lit)
+        {
+            _smoke.Play();
+            _animator.SetBool("Lit", true);
+        }
+            
     }
+
 
 
     public void LightFurnace()
     {
         _smoke.Play();
         _animator.SetBool("Lit", true);
-        _lit = true;
+        GameManager.Instance._lit = true;
     }
 
     public override void Remove()
@@ -51,7 +58,7 @@ public class Furnace : Reactor
 
     public override void Drop()
     {
-        if (_lit && _hasCollectedOre && _hasCollectedLeather && _hasCollectedOre)
+        if (GameManager.Instance._lit && GameManager.Instance._hasCollectedOre && GameManager.Instance._hasCollectedLeather && GameManager.Instance._hasCollectedCrystal)
         {
             base.Drop();
         }
@@ -64,7 +71,7 @@ public class Furnace : Reactor
 
     public override void Interact(string tag)
     {
-        if (_lit || tag == "TorchButton")
+        if (GameManager.Instance._lit || tag == "TorchButton")
         {
             switch (tag)
             {
@@ -73,21 +80,21 @@ public class Furnace : Reactor
                     main.startColor = _oreColor;
                     _psEffect.Play();
                     RemoveFromInventory(tag);
-                    _hasCollectedOre = true;
+                    GameManager.Instance._hasCollectedOre = true;
                     break;
                 case "LeatherButton":
                     main = _psEffect.main;
                     main.startColor = _leatherColor;
                     _psEffect.Play();
                     RemoveFromInventory(tag);
-                    _hasCollectedLeather = true;
+                    GameManager.Instance._hasCollectedLeather = true;
                     break;
                 case "CrystalButton":
                     main = _psEffect.main;
                     main.startColor = _crystalColor;
                     _psEffect.Play();
                     RemoveFromInventory(tag);
-                    _hasCollectedCrystal = true;
+                    GameManager.Instance._hasCollectedCrystal = true;
                     break;
                 case "TorchButton":
                     LightFurnace();
