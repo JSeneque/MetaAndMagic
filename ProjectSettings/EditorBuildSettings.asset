@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: 91fbc74060f1a68458fbec66de8d7664
+  - enabled: 1
+    path: Assets/Scenes/CrystalCave.unity
+    guid: 625890cae90b2694dac9b8c5f9590555
   m_configObjects: {}
