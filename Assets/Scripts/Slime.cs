@@ -1,47 +1,48 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Slime : Enemy
 {
-    public float fireRate = 1f;
+    //public float fireRate = 1f;
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
     public Transform homePosition;
-    public GameObject projectilePrefab;
+    //public GameObject projectilePrefab;
 
     private Animator animator;
     private float timer;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = PlayerController.Instance.transform;
         animator = GetComponent<Animator>();
+
+        // create a home position at the starting location
+        var homePos = new GameObject("Home Position");
+        homePosition = Instantiate(homePos, transform.position, Quaternion.identity).transform;
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckDistance();
-        CheckAttackDistance();
+        //CheckAttackDistance();
     }
 
     void CheckDistance()
     {
         float distance = Vector3.Distance(target.position, transform.position);
 
-        //if (distance <= chaseRadius && distance > attackRadius && !target.gameObject.GetComponent<PlayerController>().isEffected)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-        //    animator.SetBool("moving", true);
-        //} 
-        //else
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
-            
-        //}
+        if (distance <= chaseRadius && distance > attackRadius)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            animator.SetBool("moving", true);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+        }
     }
 
     private void OnDrawGizmos()
@@ -54,23 +55,11 @@ public class Slime : Enemy
         Gizmos.DrawWireSphere(transform.position, attackRadius);
     }
 
-    void CheckAttackDistance()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        float distance = Vector3.Distance(target.position, transform.position);
-
-        //if (distance <= chaseRadius && !target.gameObject.GetComponent<PlayerController>().isEffected)
-        //{
-        //    timer += Time.deltaTime;
-
-        //    if (timer >= fireRate)
-        //    {
-        //        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        //        timer = 0;
-        //    }
-        //}
-        //else
-        //{
-        //    timer = 0;
-        //}
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<HeartSystem>().TakeDamage(1);
+        }
     }
 }

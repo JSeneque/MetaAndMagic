@@ -45,15 +45,12 @@ public abstract class Reactor : MonoBehaviour
                         if (checkItem.gameObject.CompareTag("StickButton"))
                         {
                             Destroy(checkItem.gameObject);
-                            
+                            break;
                         }
-                        break;
                     }
                 }
             }
             Instantiate(_item, _dropSpot == null ? PlayerController.Instance.gameObject.transform.position : _dropSpot.position, Quaternion.identity);
-
-            
         }
         
     }

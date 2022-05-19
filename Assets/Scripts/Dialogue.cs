@@ -5,19 +5,33 @@ using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject dialogueBox;
-    public GameObject nameBox;
-    public Text dialogueText;
-    public Text nameText;
     public string[] dialogue;
     public bool isPerson = true;
 
+    private GameObject _dialogueSystem;
+    private GameObject dialogueBox;
+    private GameObject nameBox;
+    private Text dialogueText;
+    private Text nameText;
+
     private int currentLine;
-    private bool playerInRange;
+    [SerializeField] bool playerInRange;
     // Start is called before the first frame update
+
     void Start()
     {
-        
+        _dialogueSystem = GameObject.Find("DialogueSystem");
+        if (_dialogueSystem == null)
+        {
+            Debug.LogError("Dialogue System can not be found!");
+        }
+        else
+        {
+            dialogueBox = _dialogueSystem.transform.Find("DialogueBox").gameObject;
+            nameBox = dialogueBox.transform.Find("NameBox").gameObject;
+            dialogueText = dialogueBox.transform.Find("DialogueText").gameObject.GetComponent<Text>();
+            nameText = nameBox.transform.Find("NameText").gameObject.GetComponent<Text>();
+        }
     }
 
     // Update is called once per frame

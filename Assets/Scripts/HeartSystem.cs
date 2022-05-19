@@ -12,6 +12,8 @@ public class HeartSystem : MonoBehaviour
     public int healthMax;
     public ParticleSystem _bloodSpray;
 
+    [SerializeField] float _hurtCountdown = 2f;
+
     private void Start()
     {
         healthMax =  health = hearts.Length;
@@ -58,5 +60,10 @@ public class HeartSystem : MonoBehaviour
 
         UpdateHeartUI();
     }
+
+    //private IEnumerator HurtDelay(float _hurtCountdown)
+    //{
+
+    //}
 
 }
