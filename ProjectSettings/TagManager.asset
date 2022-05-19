@@ -18,6 +18,7 @@ TagManager:
   - LeatherButton
   - CrystalButton
   - TorchButton
+  - Potion
   layers:
   - Default
   - TransparentFX

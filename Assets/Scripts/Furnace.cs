@@ -10,6 +10,9 @@ public class Furnace : Reactor
     [SerializeField] Color _oreColor;
     [SerializeField] Color _leatherColor;
     [SerializeField] Color _crystalColor;
+    private bool _hasCollectedOre;
+    private bool _hasCollectedLeather;
+    private bool _hasCollectedCrystal;
 
     private Inventory _inventory;
 
@@ -44,13 +47,14 @@ public class Furnace : Reactor
     public override void Effect()
     {
         base.Effect();
-
-        
     }
 
     public override void Drop()
     {
-        base.Drop();
+        if (_lit && _hasCollectedOre && _hasCollectedLeather && _hasCollectedOre)
+        {
+            base.Drop();
+        }
     }
 
     public override void Change(string name)
@@ -65,19 +69,25 @@ public class Furnace : Reactor
             switch (tag)
             {
                 case "OreButton":
-                    _psEffect.startColor = _oreColor;
+                    var main = _psEffect.main;
+                    main.startColor = _oreColor;
                     _psEffect.Play();
                     RemoveFromInventory(tag);
+                    _hasCollectedOre = true;
                     break;
                 case "LeatherButton":
-                    _psEffect.startColor = _leatherColor;
+                    main = _psEffect.main;
+                    main.startColor = _leatherColor;
                     _psEffect.Play();
                     RemoveFromInventory(tag);
+                    _hasCollectedLeather = true;
                     break;
                 case "CrystalButton":
-                    _psEffect.startColor = _crystalColor;
+                    main = _psEffect.main;
+                    main.startColor = _crystalColor;
                     _psEffect.Play();
                     RemoveFromInventory(tag);
+                    _hasCollectedCrystal = true;
                     break;
                 case "TorchButton":
                     LightFurnace();
@@ -85,8 +95,6 @@ public class Furnace : Reactor
                 default:
                     break;
             }
-
-
         }
     }
 

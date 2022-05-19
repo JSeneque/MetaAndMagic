@@ -85,23 +85,25 @@ public class PlayerController : MonoBehaviour
         //    _animator.SetBool("moving", false);
         //    moveVelocity = Vector2.zero;
         //}
-
-        _change = Vector3.zero;
-        _change.x = Input.GetAxisRaw("Horizontal");
-        _change.y = Input.GetAxisRaw("Vertical");
-
-        //Debug.Log(_change);
-
-        if(_change != Vector3.zero)
+        if (canMove)
         {
-            MoveCharacter();
-            _animator.SetFloat("moveX", _change.x);
-            _animator.SetFloat("moveY", _change.y);
-            _animator.SetBool("moving", true);
-        }
-        else
-        {
-            _animator.SetBool("moving", false);
+            _change = Vector3.zero;
+            _change.x = Input.GetAxisRaw("Horizontal");
+            _change.y = Input.GetAxisRaw("Vertical");
+
+            //Debug.Log(_change);
+
+            if (_change != Vector3.zero)
+            {
+                MoveCharacter();
+                _animator.SetFloat("moveX", _change.x);
+                _animator.SetFloat("moveY", _change.y);
+                _animator.SetBool("moving", true);
+            }
+            else
+            {
+                _animator.SetBool("moving", false);
+            }
         }
 
 
@@ -129,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_change != Vector3.zero)
+        if (_change != Vector3.zero && canMove)
         {
             MoveCharacter();
         }
@@ -152,6 +154,33 @@ public class PlayerController : MonoBehaviour
     {
         
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Potion"))
+        {
+            Destroy(other.gameObject);
+            _animator.SetBool("Dance", true);
+            canMove = false;
+            StartCoroutine(EndGame(3));
+        }
+    }
+
+    IEnumerator EndGame(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        // reload the current scene
+        //UIFade.instance.FadeToBlack();
+        GameManager.Instance.WinGame();
+
+    }
+
+    public void ResetPlayer()
+    {
+        canMove = true;
+        _animator.SetBool("Dance", false);
+    }
+
 }
 
