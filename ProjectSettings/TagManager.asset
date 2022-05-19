@@ -9,6 +9,7 @@ TagManager:
   - Tree
   - Rock
   - Lava
+  - StickButton
   layers:
   - Default
   - TransparentFX

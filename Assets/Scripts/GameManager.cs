@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<int, Vector2> _lastCameraMinPosition = new Dictionary<int, Vector2>();
     private Dictionary<int, Vector2> _lastCameraMaxPosition = new Dictionary<int, Vector2>();
 
+
     public static GameManager Instance;
 
     private void Awake()

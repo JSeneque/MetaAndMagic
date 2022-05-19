@@ -7,7 +7,11 @@ public abstract class Reactor : MonoBehaviour
     [SerializeField] GameObject _item;
     [SerializeField] GameObject _button;
     [SerializeField] bool _canRemove = true;
+    [SerializeField] Transform _dropSpot;
 
+    private Inventory _inventory;
+
+    void Start() => _inventory = PlayerController.Instance.GetComponent<Inventory>();
 
     public virtual void Remove()
     {
@@ -27,9 +31,29 @@ public abstract class Reactor : MonoBehaviour
 
     public virtual void Drop()
     {
+        // this is just a workaround to replace stick with torch
         if (_item != null)
         {
-            Instantiate(_item, transform.position, Quaternion.identity);
+            if (_item.name == "Torch")
+            {
+                for (int i = 0; i < _inventory.slots.Length; i++)
+                {
+                    if (_inventory.isFull[i])
+                    {
+                        var checkItem = _inventory.slots[i].transform.GetChild(0);
+                        // check if stick
+                        if (checkItem.gameObject.CompareTag("StickButton"))
+                        {
+                            Destroy(checkItem.gameObject);
+                            
+                        }
+                        break;
+                    }
+                }
+            }
+            Instantiate(_item, _dropSpot == null ? PlayerController.Instance.gameObject.transform.position : _dropSpot.position, Quaternion.identity);
+
+            
         }
         
     }
