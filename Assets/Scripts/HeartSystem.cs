@@ -13,7 +13,7 @@ public class HeartSystem : MonoBehaviour
     public int healthMax;
     public ParticleSystem _bloodSpray;
 
-    [SerializeField] float _hurtCountdown = 2f;
+    //[SerializeField] float _hurtCountdown = 2f;
 
     private void Start()
     {

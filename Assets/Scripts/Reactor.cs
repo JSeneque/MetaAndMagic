@@ -85,4 +85,9 @@ public abstract class Reactor : MonoBehaviour
             // replace the button with new button
         }
     }
+
+    public virtual void Interact(string tag)
+    {
+        
+    }
 }
