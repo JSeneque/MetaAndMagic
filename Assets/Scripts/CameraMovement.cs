@@ -18,15 +18,11 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //target = PlayerController.Instance.gameObject.transform;
-
         MoveCamera();
     }
 
     void MoveCamera()
     {
-        //target = PlayerController.Instance.gameObject.transform;
-
         if (transform.position != target.position)
         {
             Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);

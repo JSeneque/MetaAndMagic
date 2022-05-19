@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 02b54c522d662a54d9b8cdfed4d1eaf6
+guid: 3063259784b0a7b43bb87a0dacfe5f9b
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6059436462865748495
-    second: furnace_1
-  - first:
-      213: -732844480985472798
-    second: furnace_2
-  - first:
-      213: -1896721643600886551
-    second: furnace_3
-  - first:
-      213: 4956400961936227032
-    second: furnace_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,91 +113,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: furnace_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 115
-        width: 45
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fd66db24ae88eba0800000000000000
-      internalID: -6059436462865748495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: furnace_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 115
-        width: 45
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e0614bc3d964d5f0800000000000000
-      internalID: -732844480985472798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: furnace_3
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 115
-        width: 45
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e4cf53e6bd7da5e0800000000000000
-      internalID: -1896721643600886551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: furnace_4
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 115
-        width: 45
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dafc9c2a6ca8c440800000000000000
-      internalID: 4956400961936227032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

@@ -12,6 +12,10 @@ public class RoomTransition : MonoBehaviour
     void Start()
     {
         cam = Camera.main.GetComponent<CameraMovement>();
+        if(cam == null)
+        {
+            Debug.LogError("Camera is missing the Camera Movement script");
+        }
     }
 
     // Update is called once per frame
