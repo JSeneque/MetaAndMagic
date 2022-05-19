@@ -7476,7 +7476,7 @@ PrefabInstance:
     - target: {fileID: 7927771410228868753, guid: d61b53bc16d5a634b91fd5894e7d28b5,
         type: 3}
       propertyPath: loadScene
-      value: Outside
+      value: Dungeon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d61b53bc16d5a634b91fd5894e7d28b5, type: 3}
