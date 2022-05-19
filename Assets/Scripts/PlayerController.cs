@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     //private SpriteRenderer renderer;
     private Animator _animator;
     // Start is called before the first frame update
+
+    private Inventory _inventory;
+    private GameObject _uIInventory;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,7 +50,19 @@ public class PlayerController : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
-        //renderer = GetComponent<SpriteRenderer>(); ;
+
+        _inventory = PlayerController.Instance.GetComponent<Inventory>();
+        _uIInventory = GameObject.FindGameObjectWithTag("UIInventory");
+        int pos = 0;
+        for (int i = 0; i < _uIInventory.transform.childCount; i++)
+        {
+            var child = _uIInventory.transform.GetChild(i);
+            if (child.CompareTag("Slot"))
+            {
+                _inventory.slots[pos] = child.gameObject;
+                pos++;
+            }
+        }
     }
 
     // Update is called once per frame

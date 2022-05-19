@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1075610259150174586}
   - component: {fileID: 1075610259150174581}
   m_Layer: 0
-  m_Name: Ore
+  m_Name: Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_SortingLayerID: -2083105989
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4909493753583609424, guid: 298d0f2b028ff5c4bb9019b58b171464,
+  m_Sprite: {fileID: -8627831150849394177, guid: 298d0f2b028ff5c4bb9019b58b171464,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.99215686}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -113,4 +113,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5661a5b741a29434d9783869d5a8244e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _button: {fileID: 4424480324635426966, guid: 01e77d306e0e2ec47a392c35f470c87a, type: 3}
+  _button: {fileID: 4424480324635426966, guid: b7814c10989bdc34fa4c841db78efb90, type: 3}

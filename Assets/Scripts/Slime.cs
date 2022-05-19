@@ -32,16 +32,19 @@ public class Slime : Enemy
 
     void CheckDistance()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
+        if (target != null)
+        {
+            float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= chaseRadius && distance > attackRadius)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            animator.SetBool("moving", true);
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+            if (distance <= chaseRadius && distance > attackRadius)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                animator.SetBool("moving", true);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, homePosition.position, moveSpeed * Time.deltaTime);
+            }
         }
     }
 

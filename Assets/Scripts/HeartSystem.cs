@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HeartSystem : MonoBehaviour
 {
@@ -44,7 +45,8 @@ public class HeartSystem : MonoBehaviour
         if(health <= 0)
         {
             Destroy(this.gameObject);
-
+            GameManager.Instance.Restart();
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -65,5 +67,11 @@ public class HeartSystem : MonoBehaviour
     //{
 
     //}
+
+    public void Reset()
+    {
+        healthMax = health = hearts.Length;
+        UpdateHeartUI();
+    }
 
 }

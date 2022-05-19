@@ -104,4 +104,24 @@ public class GameManager : MonoBehaviour
             return Vector2.zero;
         }
     }
+
+    public void Restart()
+    {
+        _scenePositions.Clear();
+        _lastCameraMinPosition.Clear();
+        _lastCameraMaxPosition.Clear();
+        //PlayerController.Instance.gameObject.GetComponent<HeartSystem>().Reset();
+
+        //Inventory _inventory;
+        //_inventory = PlayerController.Instance.GetComponent<Inventory>();
+
+        //for (int i = 0; i < _inventory.slots.Length; i++)
+        //{
+        //    if (_inventory.isFull[i])
+        //    {
+        //        GameObject.Destroy(_inventory.slots[i].transform.GetChild(0).gameObject);
+        //    }
+        //}
+        //Destroy(GameObject.Find("Player"));
+    }
 }
