@@ -63,6 +63,8 @@ public class PlayerController : MonoBehaviour
                 pos++;
             }
         }
+
+        SessionData.Instance.SetStartTime();
     }
 
     // Update is called once per frame
@@ -161,6 +163,7 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             _animator.SetBool("Dance", true);
             canMove = false;
+            SessionData.Instance.SetEndTime();
             StartCoroutine(EndGame(3));
         }
     }

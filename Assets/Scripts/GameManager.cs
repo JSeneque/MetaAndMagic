@@ -30,16 +30,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-        //_eventManager.GetComponent<TestingEvents>().TurnOnFurnace();
+        SessionData.Instance.SetStartTime();
+        SessionData.Instance.UpdateDebugUI();
     }
 
     private void Start()
     {
-        //_eventManager.GetComponent<TestingEvents>().TurnOnFurnace();
+        
     }
 
 
@@ -147,6 +148,8 @@ public class GameManager : MonoBehaviour
         _hasCollectedLeather = false;
         _hasCollectedOre = false;
         _lit = false;
+
+        SessionData.Instance.ResetScore();
     }
 
     public void WinGame()
