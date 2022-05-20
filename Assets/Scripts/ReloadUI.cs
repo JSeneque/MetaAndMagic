@@ -10,7 +10,7 @@ public class ReloadUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Start Game");
+        //Debug.Log("Start Game");
         _uIHeart.SetActive(true);
         _uIInventory.SetActive(true);
         _uiPlayAgain.SetActive(false);

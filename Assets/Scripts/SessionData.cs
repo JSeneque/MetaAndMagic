@@ -49,7 +49,7 @@ public class SessionData : MonoBehaviour
 
     public void SetEndTime()
     {
-        _endTime = Time.time;
+         _endTime = Time.time;
         _gameCompleted = true;
         _score -= (int)(_endTime - _startTime);
         _scoreText.text = _score.ToString();
@@ -57,7 +57,7 @@ public class SessionData : MonoBehaviour
 
     public void UpdateDebugUI()
     {
-        _address.text = "Wallet Address: " + _walletAddress.ToString();
+        //_address.text = "Wallet Address: " + _walletAddress.ToString();
     }
 
     public void ResetScore()
@@ -66,7 +66,7 @@ public class SessionData : MonoBehaviour
         _startTime = 0;
         _endTime = 0;
         _gameCompleted = false;
-        _scoreText.text = "0";
+        //_scoreText.text = "0";
     }
 
 }

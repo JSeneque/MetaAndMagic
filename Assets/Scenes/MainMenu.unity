@@ -306,7 +306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &171170459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1459,6 +1459,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _walletAddress: 
   _walletCollected: 0
+  _startTime: 0
+  _endTime: 0
+  _maxScore: 600000
+  _score: 0
+  _scoreText: {fileID: 0}
+  _address: {fileID: 0}
+  _gameCompleted: 0
 --- !u!4 &1178509720
 Transform:
   m_ObjectHideFlags: 0
