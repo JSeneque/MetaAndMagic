@@ -71,7 +71,6 @@ public class PlayerController : MonoBehaviour
         //if (canMove)
         //{
         //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
         //Debug.Log(moveInput);
 
         //if (moveInput != Vector2.zero)

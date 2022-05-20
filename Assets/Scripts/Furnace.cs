@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Furnace : Reactor
 {
@@ -34,10 +35,32 @@ public class Furnace : Reactor
             _smoke.Play();
             _animator.SetBool("Lit", true);
         }
-            
+
     }
 
+    private void TestingEvents_OnSpacePressed(object sender, System.EventArgs e)
+    {
+        Debug.Log("Space!");
+    }
 
+    private void Instance_TurnFurnaceOff(object sender, System.EventArgs e)
+    {
+        Debug.Log("Turn Off Furnace remotely");
+        //GameManager.Instance._hasCollectedOre = false;
+        //GameManager.Instance._hasCollectedLeather = false;
+        //GameManager.Instance._hasCollectedCrystal = false;
+        //GameManager.Instance._lit = false;
+        //_smoke.Stop();
+        //_animator.SetBool("Lit", false);
+        //GameManager.Instance._lit = false;
+    }
+
+    public void TurnOffFurnace()
+    {
+        _smoke.Stop();
+        _animator.SetBool("Lit", false);
+        GameManager.Instance._lit = false;
+    }
 
     public void LightFurnace()
     {

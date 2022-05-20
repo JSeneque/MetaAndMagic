@@ -5579,6 +5579,49 @@ Transform:
   m_Father: {fileID: 2000414992}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &383795399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383795401}
+  - component: {fileID: 383795400}
+  m_Layer: 0
+  m_Name: EventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &383795400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383795399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4b731acc654ec4e8e9282c3a5fb827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &383795401
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383795399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.297922, y: -11.538238, z: -0.58800995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &387512748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7529403379719221591, guid: f50e8c038400d52469a4a851cf7363aa,
@@ -68134,6 +68177,7 @@ GameObject:
   - component: {fileID: 1161961321}
   - component: {fileID: 1161961324}
   - component: {fileID: 1161961325}
+  - component: {fileID: 1161961326}
   m_Layer: 0
   m_Name: Furnace
   m_TagString: Furnace
@@ -68159,7 +68203,6 @@ MonoBehaviour:
   _canRemove: 0
   _dropSpot: {fileID: 169454649}
   _smoke: {fileID: 245521457}
-  _lit: 0
   _psEffect: {fileID: 637223981}
   _oreColor: {r: 0.22352943, g: 0.21176472, b: 0.23529413, a: 1}
   _leatherColor: {r: 0.5882353, g: 0.42352945, b: 0.42352945, a: 1}
@@ -68287,6 +68330,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.67, y: 3.37}
   m_EdgeRadius: 0
+--- !u!114 &1161961326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161961320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca0264702533e14ca356a83881733dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventManager: {fileID: 383795399}
 --- !u!1 &1188454494
 GameObject:
   m_ObjectHideFlags: 0
@@ -97316,6 +97372,11 @@ MonoBehaviour:
   _uIHeart: {fileID: 83743654}
   _uIInventory: {fileID: 1079486559}
   _uiPlayAgain: {fileID: 1820436963}
+  _eventManager: {fileID: 383795399}
+  _hasCollectedOre: 0
+  _hasCollectedLeather: 0
+  _hasCollectedCrystal: 0
+  _lit: 0
 --- !u!4 &1819608322
 Transform:
   m_ObjectHideFlags: 0

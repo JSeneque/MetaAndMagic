@@ -4,12 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     private Dictionary<int, Vector3> _scenePositions = new Dictionary<int, Vector3>();
     private Dictionary<int, Vector2> _lastCameraMinPosition = new Dictionary<int, Vector2>();
     private Dictionary<int, Vector2> _lastCameraMaxPosition = new Dictionary<int, Vector2>();
     [SerializeField] GameObject _uIHeart;
     [SerializeField] GameObject _uIInventory;
     [SerializeField] GameObject _uiPlayAgain;
+
+    //[SerializeField] GameObject _eventManager;
 
     //tracking win conditions
     public bool _hasCollectedOre;
@@ -31,16 +34,14 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
 
-
+        //_eventManager.GetComponent<TestingEvents>().TurnOnFurnace();
     }
 
     private void Start()
     {
-        //Debug.Log("Start Game");
-        //_uIHeart.SetActive(true);
-        //_uIInventory.SetActive(true);
-        //_uiPlayAgain.SetActive(false);
+        //_eventManager.GetComponent<TestingEvents>().TurnOnFurnace();
     }
+
 
     public void SetSceneLastPosition(int _sceneId, Vector3 _pos)
     {
@@ -142,14 +143,16 @@ public class GameManager : MonoBehaviour
                 GameObject.Destroy(_inventory.slots[i].transform.GetChild(0).gameObject);
             }
         }
+        _hasCollectedCrystal = false;
+        _hasCollectedLeather = false;
+        _hasCollectedOre = false;
+        _lit = false;
     }
 
     public void WinGame()
     {
         Restart();
-        //_uIHeart.SetActive(false);
-        //_uIInventory.SetActive(false);
         _uiPlayAgain.SetActive(true);
-        //SceneManager.LoadScene("TheEnd");
+        
     }
 }

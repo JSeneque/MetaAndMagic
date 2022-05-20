@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour
     private Animator _animator;
 
     [SerializeField] private float _transitionTime = 1f;
-    [SerializeField] private AudioSource _pressButton;
+    //[SerializeField] private AudioSource _pressButton;
      
     private void Start()
     {
@@ -18,6 +18,8 @@ public class LevelLoader : MonoBehaviour
         {
             Debug.LogError("Missing the animator for level transitions");
         }
+
+       
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class LevelLoader : MonoBehaviour
     IEnumerator LoadLevel(int leveIndex)
     {
         _animator.SetTrigger("Start");
-        _pressButton.Play();
+        //_pressButton.Play();
         yield return new WaitForSeconds(_transitionTime);
         SceneManager.LoadScene(leveIndex);
     }
