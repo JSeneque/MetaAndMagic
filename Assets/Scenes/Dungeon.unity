@@ -3506,11 +3506,19 @@ PrefabInstance:
     m_TransformParent: {fileID: 552753005}
     m_Modifications:
     - target: {fileID: 117770274456883719, guid: df948c7c641958e459f9d61081db76d1, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 117770274456883719, guid: df948c7c641958e459f9d61081db76d1, type: 3}
       propertyPath: dialogue.Array.data[0]
-      value: Open sesame!
+      value: "Hatch creaks\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 117770274456883719, guid: df948c7c641958e459f9d61081db76d1, type: 3}
       propertyPath: dialogue.Array.data[1]
+      value: Open sesame!
+      objectReference: {fileID: 0}
+    - target: {fileID: 117770274456883719, guid: df948c7c641958e459f9d61081db76d1, type: 3}
+      propertyPath: dialogue.Array.data[2]
       value: "This must be the way to the underground cavern\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 7781597310851995289, guid: df948c7c641958e459f9d61081db76d1, type: 3}

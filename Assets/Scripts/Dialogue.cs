@@ -17,10 +17,13 @@ public class Dialogue : MonoBehaviour
 
     private int currentLine;
     [SerializeField] bool playerInRange;
+    private PlayerController _player;
     // Start is called before the first frame update
 
     void Start()
     {
+        _player = PlayerController.Instance.GetComponent<PlayerController>();
+
         _dialogueSystem = GameObject.Find("DialogueSystem");
         if (_dialogueSystem == null)
         {
@@ -40,7 +43,9 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space) && playerInRange)
         {
+            
             ShowInformation();
+            
         }
     }
 
@@ -53,6 +58,7 @@ public class Dialogue : MonoBehaviour
                 ShowInformation();
             }
             playerInRange = true;
+            
         }
     }
 
@@ -96,5 +102,6 @@ public class Dialogue : MonoBehaviour
             currentLine++;
 
         }
+        
     }
 }

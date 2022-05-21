@@ -1,10 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SessionData : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern void updateLeaderboard(string wallet_address, string timestamp, string score);
+
     public static SessionData Instance;
 
     public string _walletAddress;
@@ -16,6 +19,7 @@ public class SessionData : MonoBehaviour
     public Text _scoreText;
     public Text _address;
     public bool _gameCompleted;
+    public DateTime _timestampUtc;
 
     private void Awake()
     {
@@ -29,7 +33,7 @@ public class SessionData : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         _score = _maxScore;
-     }
+    }
 
     public void SetWalletAddress(string address)
     {
@@ -45,14 +49,16 @@ public class SessionData : MonoBehaviour
     public void SetStartTime()
     {
         _startTime = Time.time;
+        _timestampUtc = DateTime.UtcNow;
     }
 
     public void SetEndTime()
     {
-         _endTime = Time.time;
+        _endTime = Time.time;
         _gameCompleted = true;
         _score -= (int)(_endTime - _startTime);
-        //_scoreText.text = _score.ToString();
+        if (_score < 0) _score = 100;
+        //SendToLeaderboard();
     }
 
     public void UpdateDebugUI()
@@ -67,6 +73,11 @@ public class SessionData : MonoBehaviour
         _endTime = 0;
         _gameCompleted = false;
         //_scoreText.text = "0";
+    }
+
+    private void SendToLeaderboard()
+    {
+        updateLeaderboard(_walletAddress, _timestampUtc.ToString(), _score.ToString());
     }
 
 }

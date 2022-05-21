@@ -154,6 +154,8 @@ public class GameManager : MonoBehaviour
         _hasCollectedOre = false;
         _lit = false;
 
+        WorldItemManager.Instance.Reset();
+
         SessionData.Instance.ResetScore();
     }
 

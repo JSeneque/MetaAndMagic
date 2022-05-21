@@ -3931,6 +3931,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7055dd0a943b5448d8747090fb6c3e, type: 3}
+--- !u!1001 &742662761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369106, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045312650791369109, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
+      propertyPath: m_Name
+      value: CrystalCritter (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a87df9df25190ce43a7c69aeed6b3a87, type: 3}
 --- !u!1001 &757694231
 PrefabInstance:
   m_ObjectHideFlags: 0
