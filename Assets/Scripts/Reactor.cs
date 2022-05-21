@@ -18,6 +18,7 @@ public abstract class Reactor : MonoBehaviour
         if (_canRemove)
         {
             StartCoroutine(DelayRemovingObject());
+            WorldItemManager.Instance.ItemPickedUp(gameObject);
         }
     }
 
@@ -45,12 +46,20 @@ public abstract class Reactor : MonoBehaviour
                         if (checkItem.gameObject.CompareTag("StickButton"))
                         {
                             Destroy(checkItem.gameObject);
+                            var obj = Instantiate(_item, _dropSpot == null ? PlayerController.Instance.gameObject.transform.position : _dropSpot.position, Quaternion.identity);
+                            WorldItemManager.Instance.ItemPickedUp(obj);
                             break;
                         }
                     }
                 }
             }
-            Instantiate(_item, _dropSpot == null ? PlayerController.Instance.gameObject.transform.position : _dropSpot.position, Quaternion.identity);
+            else
+            {
+                var obj = Instantiate(_item, _dropSpot == null ? PlayerController.Instance.gameObject.transform.position : _dropSpot.position, Quaternion.identity);
+                WorldItemManager.Instance.AddNewItem(obj);
+            }
+            
+            
         }
         
     }

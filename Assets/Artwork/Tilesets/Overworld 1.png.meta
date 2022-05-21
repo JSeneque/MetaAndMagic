@@ -112,7 +112,7 @@ TextureImporter:
     second: Overworld_35
   - first:
       213: 1208403802583081064
-    second: Overworld_36
+    second: Hanging_Sign
   - first:
       213: -1019299670136064670
     second: Overworld_37
@@ -337,7 +337,7 @@ TextureImporter:
     second: Overworld_110
   - first:
       213: 4479181887894498110
-    second: Overworld_111
+    second: Sign
   - first:
       213: -2758789277648346673
     second: Overworld_112
@@ -3991,13 +3991,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_36
+      name: Hanging_Sign
       rect:
         serializedVersion: 2
         x: 576
-        y: 560
+        y: 528
         width: 16
-        height: 16
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4684,27 +4684,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_74
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 544
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 356a3bd303257da90800000000000000
-      internalID: -7289267104728766893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Overworld_75
       rect:
         serializedVersion: 2
@@ -5356,7 +5335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_111
+      name: Sign
       rect:
         serializedVersion: 2
         x: 544
@@ -5393,27 +5372,6 @@ TextureImporter:
       bones: []
       spriteID: fc12d97c4cfc6b9d0800000000000000
       internalID: -2758789277648346673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_113
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 528
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd688600c35a4dd90800000000000000
-      internalID: -7073847437568735524
       vertices: []
       indices: 
       edges: []

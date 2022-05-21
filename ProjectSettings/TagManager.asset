@@ -19,6 +19,14 @@ TagManager:
   - CrystalButton
   - TorchButton
   - Potion
+  - Dagger
+  - Axe
+  - Crystal
+  - Leather
+  - Ore
+  - Pickaxe
+  - Stick
+  - Torch
   layers:
   - Default
   - TransparentFX

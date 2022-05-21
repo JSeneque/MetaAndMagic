@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
+
+
 
 public class GameManager : MonoBehaviour
 {
@@ -8,12 +11,13 @@ public class GameManager : MonoBehaviour
     private Dictionary<int, Vector3> _scenePositions = new Dictionary<int, Vector3>();
     private Dictionary<int, Vector2> _lastCameraMinPosition = new Dictionary<int, Vector2>();
     private Dictionary<int, Vector2> _lastCameraMaxPosition = new Dictionary<int, Vector2>();
+
     [SerializeField] GameObject _uIHeart;
     [SerializeField] GameObject _uIInventory;
     [SerializeField] GameObject _uiPlayAgain;
 
-    //[SerializeField] GameObject _eventManager;
-
+    public List<WorldObject> _worldObjects;
+    
     //tracking win conditions
     public bool _hasCollectedOre;
     public bool _hasCollectedLeather;
@@ -141,6 +145,7 @@ public class GameManager : MonoBehaviour
         {
             if (_inventory.isFull[i])
             {
+                _inventory.isFull[i] = false;
                 GameObject.Destroy(_inventory.slots[i].transform.GetChild(0).gameObject);
             }
         }
@@ -157,5 +162,17 @@ public class GameManager : MonoBehaviour
         Restart();
         _uiPlayAgain.SetActive(true);
         
+    }
+
+    public void ItemTaken (GameObject obj)
+    {
+        foreach(var item in _worldObjects)
+        {
+            if (item.gameObject == obj)
+            {
+                item._taken = true;
+                item.gameObject.SetActive(false);
+            }
+        }
     }
 }

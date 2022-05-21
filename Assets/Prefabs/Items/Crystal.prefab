@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1075610259150174581}
   m_Layer: 0
   m_Name: Crystal
-  m_TagString: Untagged
+  m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -2083105989
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8627831150849394177, guid: 298d0f2b028ff5c4bb9019b58b171464,
-    type: 3}
+  m_Sprite: {fileID: -8627831150849394177, guid: 298d0f2b028ff5c4bb9019b58b171464, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.99215686}
   m_FlipX: 0
   m_FlipY: 0

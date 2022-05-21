@@ -139,6 +139,7 @@ public class Furnace : Reactor
                 if (checkItem.gameObject.CompareTag(tag))
                 {
                     Destroy(checkItem.gameObject);
+                    _inventory.isFull[i] = false;
                     break;
                 }
             }

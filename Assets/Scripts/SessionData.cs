@@ -52,7 +52,7 @@ public class SessionData : MonoBehaviour
          _endTime = Time.time;
         _gameCompleted = true;
         _score -= (int)(_endTime - _startTime);
-        _scoreText.text = _score.ToString();
+        //_scoreText.text = _score.ToString();
     }
 
     public void UpdateDebugUI()

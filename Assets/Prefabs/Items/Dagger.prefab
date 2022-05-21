@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8307067155355028644}
   - component: {fileID: 8307067155355028647}
   - component: {fileID: 8307067155355028646}
+  - component: {fileID: -382938673469800282}
   m_Layer: 0
   m_Name: Dagger
-  m_TagString: Untagged
+  m_TagString: Dagger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -2083105989
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5936484407812813961, guid: 298d0f2b028ff5c4bb9019b58b171464,
-    type: 3}
+  m_Sprite: {fileID: 5936484407812813961, guid: 298d0f2b028ff5c4bb9019b58b171464, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,3 +131,18 @@ MonoBehaviour:
   _interactWith: Cow
   _dropDistance: 0.5
   _dropItem: {fileID: 0}
+--- !u!114 &-382938673469800282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307067155355028635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8297ea1d5cd16394cb46d8534c88d77c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneID: 1
+  _position: {x: 0, y: 0, z: 0}
+  _taken: 0

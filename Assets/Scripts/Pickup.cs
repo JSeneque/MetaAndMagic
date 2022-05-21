@@ -16,9 +16,11 @@ public class Pickup : MonoBehaviour
             {
                 if (!_inventory.isFull[i])
                 {
+                    //Debug.Log("Inventory slot " + i + " is " + _inventory.isFull[i]);
                     // add item
                     _inventory.isFull[i] = true;
                     Instantiate(_button, _inventory.slots[i].transform, false);
+                    WorldItemManager.Instance.ItemPickedUp(gameObject);
                     Destroy(gameObject);
                     break;
                 }

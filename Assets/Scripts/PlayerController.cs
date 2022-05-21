@@ -70,22 +70,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (canMove)
-        //{
-        //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //Debug.Log(moveInput);
-
-        //if (moveInput != Vector2.zero)
-        //{
-        //    moveVelocity = moveInput.normalized * speed;
-        //    _animator.SetFloat("moveX", moveInput.x);
-        //    _animator.SetFloat("moveY", moveInput.y);
-        //    _animator.SetBool("moving", true);
-        //} else
-        //{
-        //    _animator.SetBool("moving", false);
-        //    moveVelocity = Vector2.zero;
-        //}
         if (canMove)
         {
             _change = Vector3.zero;

@@ -7,6 +7,7 @@ public class FloorPlate : MonoBehaviour
     private Animator _animator;
     [SerializeField] GameObject _hatchDoor;
     [SerializeField] GameObject _sceneTransition;
+    [SerializeField] GameObject _message;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class FloorPlate : MonoBehaviour
             _animator.SetBool("Pressed", true);
             _hatchDoor.GetComponent<HatchDoor>().OpenDoor();
             _sceneTransition.SetActive(true);
+            _message.SetActive(true);
         }
     }
 

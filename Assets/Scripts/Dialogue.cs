@@ -7,6 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     public string[] dialogue;
     public bool isPerson = true;
+    public bool _locationTriggered;
 
     private GameObject _dialogueSystem;
     private GameObject dialogueBox;
@@ -39,25 +40,7 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space) && playerInRange)
         {
-            if(dialogueBox.activeInHierarchy && currentLine >= dialogue.Length)
-            {
-                dialogueBox.SetActive(false);
-                currentLine = 0;
-            }
-            else
-            {
-                dialogueBox.SetActive(true);
-
-                if (!isPerson)
-                    nameBox.SetActive(false);
-                else
-                    nameBox.SetActive(true);
-
-                CheckIfNameChange();
-                dialogueText.text = dialogue[currentLine];
-                currentLine++;
-
-            }
+            ShowInformation();
         }
     }
 
@@ -65,6 +48,10 @@ public class Dialogue : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (_locationTriggered)
+            {
+                ShowInformation();
+            }
             playerInRange = true;
         }
     }
@@ -85,6 +72,29 @@ public class Dialogue : MonoBehaviour
         {
             nameText.text = dialogue[currentLine].Replace("n-", "");
             currentLine++;
+        }
+    }
+
+    private void ShowInformation()
+    {
+        if (dialogueBox.activeInHierarchy && currentLine >= dialogue.Length)
+        {
+            dialogueBox.SetActive(false);
+            currentLine = 0;
+        }
+        else
+        {
+            dialogueBox.SetActive(true);
+
+            if (!isPerson)
+                nameBox.SetActive(false);
+            else
+                nameBox.SetActive(true);
+
+            CheckIfNameChange();
+            dialogueText.text = dialogue[currentLine];
+            currentLine++;
+
         }
     }
 }
