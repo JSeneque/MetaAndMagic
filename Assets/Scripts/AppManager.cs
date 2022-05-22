@@ -31,13 +31,14 @@ public class AppManager : MonoBehaviour
 
         if (SessionData.Instance.GetWalletReceived())
         {
-            startButton.SetActive(!MoralisInterface.IsLoggedIn());
+            //startButton.SetActive(!MoralisInterface.IsLoggedIn());
+            startButton.SetActive(true);
         }
         else
         {
-            authButton.SetActive(!MoralisInterface.IsLoggedIn());
-        }
-        
+            //authButton.SetActive(!MoralisInterface.IsLoggedIn());
+            authButton.SetActive(true);
+        } 
     }
 
     public async UniTask LoginWithWeb3()
