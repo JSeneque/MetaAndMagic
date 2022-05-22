@@ -688,13 +688,13 @@ TextureImporter:
     second: Overworld_227
   - first:
       213: -3443126691455297709
-    second: Overworld_228
+    second: Tombstone_1
   - first:
       213: -3211178108238784621
     second: Overworld_229
   - first:
       213: 3559884070205965680
-    second: Overworld_230
+    second: Tombstone_2
   - first:
       213: 353664641242372072
     second: Overworld_231
@@ -7477,13 +7477,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_228
+      name: Tombstone_1
       rect:
         serializedVersion: 2
         x: 560
-        y: 480
-        width: 16
-        height: 16
+        y: 464
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7498,34 +7498,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_229
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3979aeb268a9f63d0800000000000000
-      internalID: -3211178108238784621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_230
+      name: Tombstone_2
       rect:
         serializedVersion: 2
         x: 592
-        y: 480
-        width: 16
-        height: 16
+        y: 464
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7535,27 +7514,6 @@ TextureImporter:
       bones: []
       spriteID: 075c23663bf376130800000000000000
       internalID: 3559884070205965680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_231
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e71ede0e1878e400800000000000000
-      internalID: 353664641242372072
       vertices: []
       indices: 
       edges: []
@@ -8312,90 +8270,6 @@ TextureImporter:
       bones: []
       spriteID: f3099d6b54ce62da0800000000000000
       internalID: -5969824471868403649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_268
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28434f2d943d45d40800000000000000
-      internalID: 5572310952989439106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_269
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e93f9bae1fc6ff250800000000000000
-      internalID: 5980618616452281246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_270
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7651ec5b7d514d200800000000000000
-      internalID: 203811899350848871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Overworld_271
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd0123b9a6c7ce260800000000000000
-      internalID: 7128209107532779743
       vertices: []
       indices: 
       edges: []

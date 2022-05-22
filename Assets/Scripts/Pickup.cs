@@ -21,6 +21,10 @@ public class Pickup : MonoBehaviour
                     _inventory.isFull[i] = true;
                     Instantiate(_button, _inventory.slots[i].transform, false);
                     WorldItemManager.Instance.ItemPickedUp(gameObject);
+                    //if(gameObject.CompareTag("Torch"))
+                    //{
+                    //    other.gameObject.GetComponent<PlayerController>().UpdateCarryingTorch(true);
+                    //}
                     Destroy(gameObject);
                     break;
                 }

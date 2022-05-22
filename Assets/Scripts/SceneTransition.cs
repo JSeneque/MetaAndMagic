@@ -7,6 +7,7 @@ public class SceneTransition : MonoBehaviour
     public string winScene;
 
     [SerializeField] Transform _lastPosition;
+    [SerializeField] LevelLoader _levelLoader;
     private CameraMovement _cameraMovement;
 
     private Animator anim;
@@ -23,7 +24,7 @@ public class SceneTransition : MonoBehaviour
         int buildIndex = SceneManager.GetActiveScene().buildIndex;
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(loadScene);
+            // SceneManager.LoadScene(loadScene);
             // record the last position the player was at the scene
             GameManager.Instance.SetSceneLastPosition(buildIndex, _lastPosition.position);
             
@@ -32,6 +33,8 @@ public class SceneTransition : MonoBehaviour
                 GameManager.Instance.SetSceneLastCameraMinPosition(buildIndex, _cameraMovement.minPosition);
                 GameManager.Instance.SetSceneLastCameraMaxPosition(buildIndex, _cameraMovement.maxPosition);
             }
+
+            _levelLoader.LoadNextLevel(loadScene);
         }
     }
 
@@ -42,7 +45,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator Transition(string sceneName)
     {
-        anim.SetTrigger("end");
+        anim.SetTrigger("Start");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(sceneName);
 

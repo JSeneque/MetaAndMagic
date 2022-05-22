@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-
-
 public class GameManager : MonoBehaviour
 {
 
@@ -14,7 +12,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject _uIHeart;
     [SerializeField] GameObject _uIInventory;
+    [SerializeField] GameObject _uIResetButton;
     [SerializeField] GameObject _uiPlayAgain;
+    //[SerializeField] GameObject _uiWalletSubmit;
 
     public List<WorldObject> _worldObjects;
     
@@ -41,12 +41,6 @@ public class GameManager : MonoBehaviour
         SessionData.Instance.SetStartTime();
         SessionData.Instance.UpdateDebugUI();
     }
-
-    private void Start()
-    {
-        
-    }
-
 
     public void SetSceneLastPosition(int _sceneId, Vector3 _pos)
     {
@@ -163,6 +157,7 @@ public class GameManager : MonoBehaviour
     {
         Restart();
         _uiPlayAgain.SetActive(true);
+        //_uiWalletSubmit.SetActive(true);
         
     }
 
@@ -176,5 +171,25 @@ public class GameManager : MonoBehaviour
                 item.gameObject.SetActive(false);
             }
         }
+    }
+
+    public void ResetButton()
+    {
+        Restart();
+        SceneManager.LoadScene(1);
+    }
+
+    public void DisableUI()
+    {
+        _uIHeart.SetActive(false);
+        _uIInventory.SetActive(false);
+        _uIResetButton.SetActive(false);
+    }
+
+    public void EnableUI()
+    {
+        _uIHeart.SetActive(true);
+        _uIInventory.SetActive(true);
+        _uIResetButton.SetActive(true);
     }
 }

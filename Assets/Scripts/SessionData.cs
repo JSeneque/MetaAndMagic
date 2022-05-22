@@ -21,6 +21,8 @@ public class SessionData : MonoBehaviour
     public bool _gameCompleted;
     public DateTime _timestampUtc;
 
+    [SerializeField] GameObject _walletSubmitText;
+
     private void Awake()
     {
         if (Instance != null)
@@ -58,7 +60,7 @@ public class SessionData : MonoBehaviour
         _gameCompleted = true;
         _score -= (int)(_endTime - _startTime);
         if (_score < 0) _score = 100;
-        //SendToLeaderboard();
+        SendToLeaderboard();
     }
 
     public void UpdateDebugUI()
@@ -77,7 +79,13 @@ public class SessionData : MonoBehaviour
 
     private void SendToLeaderboard()
     {
+#if UNITY_WEBGL
         updateLeaderboard(_walletAddress, _timestampUtc.ToString(), _score.ToString());
+#endif
+
+#if UNITY_EDITOR
+        Debug.Log("Wallet Address: " + _walletAddress + " Timestamp " + _timestampUtc.ToString() + " Score: " + _score.ToString());
+#endif
     }
 
 }

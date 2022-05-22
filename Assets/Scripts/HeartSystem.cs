@@ -46,7 +46,8 @@ public class HeartSystem : MonoBehaviour
         {
             Destroy(this.gameObject);
             GameManager.Instance.Restart();
-            SceneManager.LoadScene(0);
+            GameManager.Instance.DisableUI();
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 

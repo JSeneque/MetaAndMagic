@@ -72,7 +72,7 @@ public class AppManager : MonoBehaviour
                 Debug.Log("Failed to retrieve server time from Moralis Server!");
             }
 
-            string signMessage = $"Moralis Authentication\n\nId: {appId}:{serverTime}";
+            string signMessage = $"Meta & Magic Authentication\n\nId: {appId}:{serverTime}";
 
             string signature = await Web3GL.Sign(signMessage);
 

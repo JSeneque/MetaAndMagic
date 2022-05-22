@@ -28,6 +28,10 @@ public class Slot : MonoBehaviour
     {
         foreach(Transform child in transform)
         {
+            if (child.gameObject.CompareTag("TorchButton"))
+            {
+                //PlayerController.Instance.GetComponent<PlayerController>().UpdateCarryingTorch(false);
+            }
             child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }

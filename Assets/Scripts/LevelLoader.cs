@@ -8,6 +8,7 @@ public class LevelLoader : MonoBehaviour
 {
     private Animator _animator;
 
+
     [SerializeField] private float _transitionTime = 1f;
     //[SerializeField] private AudioSource _pressButton;
      
@@ -22,26 +23,34 @@ public class LevelLoader : MonoBehaviour
        
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    LoadNextLevel();
-        //}
-    }
-
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-
     }
 
-    IEnumerator LoadLevel(int leveIndex)
+    public void LoadNextLevel(string name)
+    {
+        // last minute workaround to redisplay UI
+        GameManager.Instance.EnableUI();
+
+        StartCoroutine(LoadLevelByName(name));
+    }
+
+
+
+    IEnumerator LoadLevel(int sceneID)
     {
         _animator.SetTrigger("Start");
         //_pressButton.Play();
         yield return new WaitForSeconds(_transitionTime);
-        SceneManager.LoadScene(leveIndex);
+        SceneManager.LoadScene(sceneID);
+    }
+
+    IEnumerator LoadLevelByName(string name)
+    {
+        _animator.SetTrigger("Start");
+        //_pressButton.Play();
+        yield return new WaitForSeconds(_transitionTime);
+        SceneManager.LoadScene(name);
     }
 }

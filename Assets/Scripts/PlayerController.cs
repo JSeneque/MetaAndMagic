@@ -5,21 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    
-    //public Sprite slimeImg;
-    //public Sprite playerImg;
-    //public float effectTimer = 20.0f;
-    //public float timer = 0f;
-    //public bool isEffected = false;
-    //public GameObject effect;
-    //public float effectOffset = -0.629f;
 
     struct ScenePositions
     {
         int SceneID;
         Transform Position;
     }
-    
+
+    [SerializeField] AudioClip _walkGroundClip;
 
     public bool canMove = true;
 
@@ -28,14 +21,15 @@ public class PlayerController : MonoBehaviour
     private Vector3 _change;
     private Rigidbody2D rb;
     private Dictionary<int, ScenePositions> _scenePositions = new Dictionary<int, ScenePositions>();
-
-    //private Vector2 moveVelocity;
-    //private SpriteRenderer renderer;
     private Animator _animator;
-    // Start is called before the first frame update
+
+
+    AudioSource _audioSource;
 
     private Inventory _inventory;
     private GameObject _uIInventory;
+
+   // public bool _carryTorch;
 
     void Awake()
     {
@@ -65,6 +59,10 @@ public class PlayerController : MonoBehaviour
         }
 
         SessionData.Instance.SetStartTime();
+
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.clip = _walkGroundClip;
+
     }
 
     // Update is called once per frame
@@ -84,6 +82,7 @@ public class PlayerController : MonoBehaviour
                 _animator.SetFloat("moveX", _change.x);
                 _animator.SetFloat("moveY", _change.y);
                 _animator.SetBool("moving", true);
+                //_audioSource.Play();
             }
             else
             {
@@ -91,26 +90,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-
-
-        //}
-        //else
-        //{
-        //    rb.velocity = Vector2.zero;
-        //}
-
-        //if (isEffected)
-        //{
-        //    timer += Time.deltaTime;
-        //    if (timer > effectTimer)
-        //    {
-        //        timer = 0f;
-        //        Vector2 playerPos = new Vector2(transform.position.x, transform.position.y + effectOffset);
-        //        Instantiate(effect, playerPos, Quaternion.identity);
-        //        renderer.sprite = playerImg;
-        //        isEffected = false;
-        //    }
-        //}
 
     }
 
@@ -145,6 +124,8 @@ public class PlayerController : MonoBehaviour
         if(other.CompareTag("Potion"))
         {
             Destroy(other.gameObject);
+            // quick fix (last minute)
+
             _animator.SetBool("Dance", true);
             canMove = false;
             SessionData.Instance.SetEndTime();
@@ -167,6 +148,16 @@ public class PlayerController : MonoBehaviour
         canMove = true;
         _animator.SetBool("Dance", false);
     }
+
+    //public void UpdateCarryingTorch(bool isCarrying)
+    //{
+    //    _carryTorch = isCarrying;
+    //}
+
+    //public bool isCarryingTorch()
+    //{
+    //    return _carryTorch;
+    //}
 
 }
 
