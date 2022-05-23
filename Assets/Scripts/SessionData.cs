@@ -8,7 +8,10 @@ using UnityEngine.UI;
 public class SessionData : MonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void updateLeaderboard(string wallet_address, string timestamp, string score, string verify_wallet, string verify_score, string verify_timestamp);
+    private static extern void updateLeaderboard(string wallet_address, string timestamp, string score, string verify_wallet, string verify_timestamp, string verify_score);
+
+    [DllImport("__Internal")]
+    private static extern void TestHash(string wallet_address, string timestamp, string score, string verify_wallet, string verify_timestamp, string verify_score);
 
     public static SessionData Instance;
 
@@ -86,15 +89,17 @@ public class SessionData : MonoBehaviour
         string hashTimestamp = HashPassword(password, _timestampUtc.ToString());
         string hashScore = HashPassword(password, _score.ToString());
 
-#if UNITY_WEBGL
-        updateLeaderboard(_walletAddress.ToString(), _timestampUtc.ToString(), _score.ToString(), hashWalletAddress.ToString(), hashTimestamp.ToString(), hashScore.ToString());
-#endif
-
-#if UNITY_EDITOR
         Debug.Log("Wallet Address: " + _walletAddress + " Timestamp " + _timestampUtc.ToString() + " Score: " + _score.ToString());
-        Debug.Log("Hash Timestamp " + hashTimestamp);
+        Debug.Log("Wallet Address: " + hashWalletAddress.ToString() + "Hash Timestamp " + hashTimestamp.ToString() + " Score: " + hashScore.ToString());
 
-#endif
+        TestHash(
+                  _walletAddress.ToString()
+                , _timestampUtc.ToString()
+                , _score.ToString()
+                , hashWalletAddress.ToString()
+                , hashTimestamp.ToString()
+                , hashScore.ToString()
+        );
     }
 
     public static String HashPassword(string _password, string _string)
