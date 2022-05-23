@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AudioClip _walkGroundClip;
 
+
     public bool canMove = true;
 
     public static PlayerController Instance;
@@ -127,6 +128,8 @@ public class PlayerController : MonoBehaviour
             // quick fix (last minute)
 
             _animator.SetBool("Dance", true);
+            GameObject.Find("BackgroundAudio").GetComponent<BackgroundAudio>().PlayWinMusic();
+
             canMove = false;
             SessionData.Instance.SetEndTime();
             StartCoroutine(EndGame(3));

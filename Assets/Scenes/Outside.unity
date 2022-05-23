@@ -21828,7 +21828,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7501137320716979188, guid: cce492d3e37cdea49b7d400905536be7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7501137320716979188, guid: cce492d3e37cdea49b7d400905536be7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -68274,7 +68274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4409073af4fba488d1320708ac8c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _backgroundMusic: {fileID: 8300000, guid: fceb1b145a960024f808799fc0d7e85b, type: 3}
+  _backgroundMusic: {fileID: 8300000, guid: 19915c07348bcf247942e57511b7d92a, type: 3}
+  _winMusic: {fileID: 8300000, guid: 263be7c5e9ea4ce429ab7be439dd46e6, type: 3}
 --- !u!82 &1305595060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -97275,7 +97276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1885552846
 MonoBehaviour:
@@ -98508,6 +98509,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[2]
       value: 
       objectReference: {fileID: 874485948}
+    - target: {fileID: 3125040219111467232, guid: 0db2f4f424005b346993b303a19d986a, type: 3}
+      propertyPath: _winMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 263be7c5e9ea4ce429ab7be439dd46e6, type: 3}
     - target: {fileID: 3125040219111467232, guid: 0db2f4f424005b346993b303a19d986a, type: 3}
       propertyPath: _walkGroundClip
       value: 
